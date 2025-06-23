@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Flutter Development Session - SVR Engineering College</title>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="styles.css" />
+   </head>
+   <body>
+      <div class="slide-counter">
+         <span id="current-slide">1</span> / <span id="total-slides">15</span>
+      </div>
+      <div class="presentation-container">
+         <!-- Slide 1: Title Slide -->
+         <div class="slide active intro-slide">
+            <div class="flutter-logo">📱</div>
+            <h1>Flutter Development</h1>
+            <h2 style="color: white; border: none">
+               From Scratch to Build Generation
+            </h2>
+            <div class="speaker-info">
+               <h3>Presented by: Nitesh Setti</h3>
+               <div class="speaker-info-details">
+                  <p><strong>Position:</strong> Software Development Engineer</p>
+                  <p><strong>Company:</strong> EBO Mart Private Limited, Bangalore</p>
+                  <p><strong>Experience:</strong> 3.1 Years</p>
+               </div>
+            </div>
+            <div class="college-info">
+               <h3>SVR Engineering College (Polytechnic)</h3>
+               <div class="college-info-details">
+                  <p><strong>Session Duration:</strong> 3 Hours (6:00 PM - 9:00 PM)</p>
+                  <p><strong>Date:</strong> July 2nd, 2025</p>
+               </div>
+            </div>
+         </div>
+         <!-- Slide 2: Agenda -->
+         <div class="slide">
+            <h2>📋 Session Agenda</h2>
+            <div class="feature-grid">
+               <div class="feature-card">
+                  <h3>Hour 1</h3>
+                  <p>
+                     • App Development Overview<br />
+                     • Introduction to Flutter<br />
+                     • Dart Programming Language<br />
+                     • Environment Setup
+                  </p>
+               </div>
+               <div class="feature-card">
+                  <h3>Hour 2</h3>
+                  <p>
+                     • Flutter Architecture<br />
+                     • Widgets & UI Components<br />
+                     • State Management<br />
+                     • Hands-on Coding
+                  </p>
+               </div>
+               <div class="feature-card">
+                  <h3>Hour 3</h3>
+                  <p>
+                     • Building First App<br />
+                     • Emulators & Simulators<br />
+                     • Testing & Debugging<br />
+                     • Build Generation
+                  </p>
+               </div>
+            </div>
+         </div>
+         <!-- Slide 3: Mobile App Development Overview -->
+         <div class="slide">
+            <h2>📱 Mobile App Development Overview</h2>
+            <h3>Native vs Cross-Platform Development</h3>
+            <div class="pros-cons">
+               <div class="pros">
+                  <h4>✅ Native Development</h4>
+                  <ul>
+                     <li>Best performance</li>
+                     <li>Platform-specific features</li>
+                     <li>Native look and feel</li>
+                     <li>Direct API access</li>
+                  </ul>
+                  <p>
+                     <strong>Languages:</strong> Swift/Objective-C (iOS), Java/Kotlin
+                     (Android)
+                  </p>
+               </div>
+               <div class="cons">
+                  <h4>🔄 Cross-Platform</h4>
+                  <ul>
+                     <li>Single codebase</li>
+                     <li>Faster development</li>
+                     <li>Lower cost</li>
+                     <li>Easier maintenance</li>
+                  </ul>
+                  <p><strong>Technologies:</strong> Flutter, React Native, Xamarin</p>
+               </div>
+            </div>
+            <div class="highlight">
+               <h4>Why Choose Cross-Platform?</h4>
+               <p>
+                  With over 6.8 billion smartphone users worldwide, cross-platform
+                  development allows you to reach both iOS and Android users with a
+                  single codebase, reducing development time by up to 50%.
+               </p>
+            </div>
+         </div>
+         <!-- Slide 4: What is Flutter? -->
+         <div class="slide">
+            <h2>🚀 What is Flutter?</h2>
+            <div class="highlight">
+               <p>
+                  <strong>Flutter</strong> is Google's UI toolkit for building
+                  beautiful, natively compiled applications for mobile, web, desktop,
+                  and embedded devices from a single codebase.
+               </p>
+            </div>
+            <h3>Key Features:</h3>
+            <div class="feature-grid">
+               <div class="feature-card">
+                  <h4>🎨 Single Codebase</h4>
+                  <p>Write once, run anywhere - iOS, Android, Web, Desktop</p>
+               </div>
+               <div class="feature-card">
+                  <h4>⚡ Fast Development</h4>
+                  <p>Hot reload for instant updates during development</p>
+               </div>
+               <div class="feature-card">
+                  <h4>🎯 Native Performance</h4>
+                  <p>Compiles to native ARM code for optimal performance</p>
+               </div>
+               <div class="feature-card">
+                  <h4>🎪 Rich Widgets</h4>
+                  <p>Extensive library of customizable widgets</p>
+               </div>
+            </div>
+            <div class="dart-features">
+               <h3>Flutter Timeline:</h3>
+               <ul>
+                  <li><strong>2017:</strong> Flutter Alpha Release</li>
+                  <li><strong>2018:</strong> Flutter 1.0 - Stable Release</li>
+                  <li>
+                     <strong>2021:</strong> Flutter 2.0 - Web and Desktop Support
+                  </li>
+                  <li><strong>2025:</strong> Flutter 3.x - Latest Version</li>
+               </ul>
+            </div>
+         </div>
+         <!-- Slide 5: Dart Programming Language -->
+         <div class="slide">
+            <h2>🎯 Dart Programming Language</h2>
+            <div class="highlight">
+               <p>
+                  <strong>Dart</strong> is a client-optimized programming language
+                  developed by Google, designed for building fast apps on any
+                  platform.
+               </p>
+            </div>
+            <h3>Dart Features:</h3>
+            <div class="dart-features">
+               <ul>
+                  <li>
+                     <strong>Object-Oriented:</strong> Classes, inheritance, interfaces
+                  </li>
+                  <li>
+                     <strong>Strongly Typed:</strong> Type safety with null safety
+                  </li>
+                  <li>
+                     <strong>Garbage Collected:</strong> Automatic memory management
+                  </li>
+                  <li>
+                     <strong>Async/Await:</strong> Built-in support for asynchronous
+                     programming
+                  </li>
+                  <li>
+                     <strong>Just-in-Time (JIT):</strong> Fast development with hot
+                     reload
+                  </li>
+                  <li>
+                     <strong>Ahead-of-Time (AOT):</strong> Fast startup and execution
+                  </li>
+               </ul>
+            </div>
+            <h3>Basic Dart Syntax:</h3>
+            <pre class="code-block"><code>void main() {
+  // Variables
+  String name = 'Flutter';
+  int year = 2025;
+  double version = 3.0;
+  bool isAwesome = true;
+
+  // Print statement
+  print('Hello $name! Year: $year');
+
+  // Function call
+  greetUser('Professor');
+}
+
+void greetUser(String user) {
+  print('Welcome to Flutter session, $user!');
+}
+</code></pre>
+         </div>
+         <!-- Slide 6: Development Environment Setup -->
+         <div class="slide">
+            <h2>⚙️ Development Environment Setup</h2>
+            <h3>Prerequisites:</h3>
+            <ol class="step-list">
+               <li>
+                  <strong>Operating System:</strong> Windows 10+, macOS 10.14+, or
+                  Linux
+               </li>
+               <li>
+                  <strong>Disk Space:</strong> At least 2.8 GB (excluding IDE/tools)
+               </li>
+               <li><strong>Tools:</strong> Git for version control</li>
+            </ol>
+            <h3>Installation Steps:</h3>
+            <ol class="step-list">
+               <li>Download Flutter SDK from https://flutter.dev</li>
+               <li>Extract and add Flutter to PATH environment variable</li>
+               <li>Run <code>flutter doctor</code> to check dependencies</li>
+               <li>Install Android Studio or VS Code with Flutter plugins</li>
+               <li>Set up Android SDK and create virtual device</li>
+               <li>For iOS (macOS only): Install Xcode and iOS Simulator</li>
+            </ol>
+            <pre class="code-block"><code># Verify installation
+flutter doctor -v
+# Create new Flutter project
+flutter create my_first_app
+# Run the app
+cd my_first_app
+flutter run
+</code></pre>
+         </div>
+         <!-- Slide 7: Flutter Architecture -->
+         <div class="slide">
+            <h2>🏗️ Flutter Architecture</h2>
+            <div class="architecture-diagram">
+               <h3>Flutter Architecture Layers</h3>
+               <div style="display: grid; grid-template-columns: 1fr; gap: 10px; margin: 20px 0;">
+                  <div class="arch-layer arch-framework">
+                     <strong>Framework (Dart)</strong><br />
+                     Material, Cupertino, Widgets, Rendering, Animation, Painting,
+                     Gestures
+                  </div>
+                  <div class="arch-layer arch-engine">
+                     <strong>Engine (C/C++)</strong><br />
+                     Skia Graphics Engine, Dart Runtime, Platform Channels
+                  </div>
+                  <div class="arch-layer arch-platform">
+                     <strong>Platform (Java/ObjC/C++)</strong><br />
+                     Android (Java/Kotlin), iOS (Objective-C/Swift), Web (HTML/CSS/JS)
+                  </div>
+               </div>
+            </div>
+            <div class="highlight">
+               <h4>Key Architectural Concepts:</h4>
+               <ul>
+                  <li>
+                     <strong>Everything is a Widget:</strong> UI components are widgets
+                  </li>
+                  <li>
+                     <strong>Widget Tree:</strong> Hierarchical structure of widgets
+                  </li>
+                  <li><strong>Build Method:</strong> Returns widget description</li>
+                  <li>
+                     <strong>State Management:</strong> How data flows through the app
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <!-- Slide 8: Widgets Overview -->
+         <div class="slide">
+            <h2>🧩 Flutter Widgets</h2>
+            <div class="highlight">
+               <p>
+                  <strong>"Everything is a Widget"</strong> - In Flutter, everything
+                  you see on screen is a widget, from buttons to layout structures.
+               </p>
+            </div>
+            <h3>Widget Categories:</h3>
+            <div class="widget-showcase">
+               <div class="widget-card">
+                  <h4>📦 Layout Widgets</h4>
+                  <p>Container, Row, Column, Stack, Positioned</p>
+               </div>
+               <div class="widget-card">
+                  <h4>📝 Text Widgets</h4>
+                  <p>Text, RichText, TextField, TextFormField</p>
+               </div>
+               <div class="widget-card">
+                  <h4>🖼️ Image Widgets</h4>
+                  <p>Image, Icon, CircleAvatar, NetworkImage</p>
+               </div>
+               <div class="widget-card">
+                  <h4>🎮 Interactive Widgets</h4>
+                  <p>Button, Switch, Slider, Checkbox</p>
+               </div>
+               <div class="widget-card">
+                  <h4>📋 List Widgets</h4>
+                  <p>ListView, GridView, ListTile, Card</p>
+               </div>
+               <div class="widget-card">
+                  <h4>🎨 Material Design</h4>
+                  <p>AppBar, Scaffold, FloatingActionButton</p>
+               </div>
+            </div>
+            <h3>Widget Types:</h3>
+            <div class="pros-cons">
+               <div class="pros">
+                  <h4>Stateless Widgets</h4>
+                  <p>Immutable widgets that don't change over time</p>
+                  <ul>
+                     <li>Text</li>
+                     <li>Icon</li>
+                     <li>Container</li>
+                  </ul>
+               </div>
+               <div class="cons">
+                  <h4>Stateful Widgets</h4>
+                  <p>Dynamic widgets that can change during runtime</p>
+                  <ul>
+                     <li>TextField</li>
+                     <li>Checkbox</li>
+                     <li>Counter App</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!-- Slide 9: First Flutter App Code -->
+         <div class="slide">
+            <h2>💻 Your First Flutter App</h2>
+            <h3>Counter App - Complete Code:</h3>
+            <pre class="code-block"><code>import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key? key, required this.title}) : super(key: key);
+  final String title;
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('You have pushed the button this many times:'),
+            Text('$_counter', style: Theme.of(context).textTheme.headline4),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
+</code></pre>
+         </div>
+         <!-- Slide 10: Emulators and Simulators -->
+         <div class="slide">
+            <h2>📱 Emulators & Simulators</h2>
+            <div class="pros-cons">
+               <div class="pros">
+                  <h4>🤖 Android Emulator</h4>
+                  <ul>
+                     <li>Part of Android Studio</li>
+                     <li>Multiple device configurations</li>
+                     <li>Various Android versions</li>
+                     <li>Hardware simulation</li>
+                     <li>Google Play Store access</li>
+                  </ul>
+               </div>
+               <div class="cons">
+                  <h4>🍎 iOS Simulator</h4>
+                  <ul>
+                     <li>macOS only</li>
+                     <li>Part of Xcode</li>
+                     <li>iPhone and iPad models</li>
+                     <li>iOS version testing</li>
+                     <li>Native performance</li>
+                  </ul>
+               </div>
+            </div>
+            <h3>Setup Commands:</h3>
+            <pre class="code-block"><code># List available devices
+flutter devices
+# Create Android emulator
+flutter emulators
+# Run on specific device
+flutter run -d "device_id"
+# Run on all connected devices
+flutter run -d all
+# Hot reload (during development)
+Press 'r' in terminal or Ctrl+S in IDE
+# Hot restart
+Press 'R' in terminal
+</code></pre>
+            <div class="highlight">
+               <h4>Physical Device Testing:</h4>
+               <p>
+                  Enable Developer Options and USB Debugging on Android devices, or
+                  use Xcode for iOS devices. Physical devices provide the most
+                  accurate testing experience.
+               </p>
+            </div>
+         </div>
+         <!-- Slide: Emulator & Simulator Images -->
+         <div class="slide">
+            <h2>📱 Emulator & Simulator Screenshots</h2>
+            <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 32px;">
+               <div style="text-align: center;">
+                  <img src="./android.png" alt="Android Emulator" style="width: 320px; max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(30,60,114,0.10);">
+                  <div style="margin-top: 12px; font-weight: 600; color: #2563eb;">Android Emulator</div>
+               </div>
+               <div style="text-align: center;">
+                  <img src="./ios.jpeg" alt="iPhone Simulator" style="width: 320px; max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(30,60,114,0.10);">
+                  <div style="margin-top: 12px; font-weight: 600; color: #2563eb;">iPhone Simulator</div>
+               </div>
+            </div>
+         </div>
+         <!-- Slide 11: State Management -->
+         <div class="slide">
+            <h2>🔄 State Management</h2>
+            <div class="highlight">
+               <p>
+                  <strong>State</strong> is information that can be read synchronously
+                  when the widget is built and might change during the lifetime of the
+                  widget.
+               </p>
+            </div>
+            <h3>Types of State Management:</h3>
+            <div class="feature-grid">
+               <div class="feature-card">
+                  <h4>📍 Local State</h4>
+                  <p>setState() - For simple widget state</p>
+               </div>
+               <div class="feature-card">
+                  <h4>🌐 App State</h4>
+                  <p>Provider, Bloc, Riverpod - For complex state</p>
+               </div>
+               <div class="feature-card">
+                  <h4>🔥 Ephemeral State</h4>
+                  <p>Animation controllers, form validation</p>
+               </div>
+               <div class="feature-card">
+                  <h4>💾 Persistent State</h4>
+                  <p>SharedPreferences, databases</p>
+               </div>
+            </div>
+            <h3>setState() Example:</h3>
+            <pre class="code-block"><code>class _CounterState extends State<Counter> {
+  int _count = 0;
+  void _increment() {
+    setState(() {
+      _count++; // This triggers a rebuild
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Text('Count: $_count');
+  }
+}
+</code></pre>
+         </div>
+         <!-- Slide 12: Testing & Debugging -->
+         <div class="slide">
+            <h2>🐛 Testing & Debugging</h2>
+            <h3>Testing Types in Flutter:</h3>
+            <div class="feature-grid">
+               <div class="feature-card">
+                  <h4>🔬 Unit Tests</h4>
+                  <p>Test individual functions, methods, and classes</p>
+               </div>
+               <div class="feature-card">
+                  <h4>🧩 Widget Tests</h4>
+                  <p>Test UI components and user interactions</p>
+               </div>
+               <div class="feature-card">
+                  <h4>📱 Integration Tests</h4>
+                  <p>Test complete app functionality</p>
+               </div>
+            </div>
+            <h3>Debugging Tools:</h3>
+            <div class="dart-features">
+               <ul>
+                  <li>
+                     <strong>Flutter Inspector:</strong> Widget tree visualization
+                  </li>
+                  <li>
+                     <strong>Debugger:</strong> Breakpoints and variable inspection
+                  </li>
+                  <li><strong>Hot Reload:</strong> Instant code changes</li>
+                  <li>
+                     <strong>Performance Profiler:</strong> App performance analysis
+                  </li>
+                  <li><strong>Network Inspector:</strong> API call monitoring</li>
+               </ul>
+            </div>
+            <h3>Common Debug Commands:</h3>
+            <pre class="code-block"><code># Debug mode
+flutter run --debug
+# Profile mode
+flutter run --profile
+# Release mode
+flutter run --release
+# Analyze code
+flutter analyze
+# Run tests
+flutter test
+# Generate coverage report
+flutter test --coverage
+</code></pre>
+         </div>
+         <!-- Slide 13: Build Generation -->
+         <div class="slide">
+            <h2>🏗️ Build Generation</h2>
+            <h3>Build Types:</h3>
+            <div class="feature-grid">
+               <div class="feature-card">
+                  <h4>🔧 Debug Build</h4>
+                  <p>Development with debugging info</p>
+               </div>
+               <div class="feature-card">
+                  <h4>📊 Profile Build</h4>
+                  <p>Performance testing build</p>
+               </div>
+               <div class="feature-card">
+                  <h4>🚀 Release Build</h4>
+                  <p>Production-ready optimized build</p>
+               </div>
+            </div>
+            <h3>Build Commands:</h3>
+            <pre class="code-block"><code># Android APK (Debug)
+flutter build apk --debug
+# Android APK (Release)
+flutter build apk --release
+# Android App Bundle (Recommended for Play Store)
+flutter build appbundle --release
+# iOS Build (macOS only)
+flutter build ios --release
+# Web Build
+flutter build web --release
+# Windows Build
+flutter build windows --release
+# Check build size
+flutter build apk --analyze-size
+</code></pre>
+            <div class="highlight">
+               <h4>Build Output Locations:</h4>
+               <ul>
+                  <li>
+                     <strong>Android APK:</strong> build/app/outputs/flutter-apk/
+                  </li>
+                  <li>
+                     <strong>Android Bundle:</strong> build/app/outputs/bundle/release/
+                  </li>
+                  <li><strong>iOS:</strong> build/ios/archive/</li>
+                  <li><strong>Web:</strong> build/web/</li>
+               </ul>
+            </div>
+         </div>
+         <!-- Slide 14: Best Practices -->
+         <div class="slide">
+            <h2>✨ Flutter Best Practices</h2>
+            <div class="feature-grid">
+               <div class="feature-card">
+                  <h4>🎨 UI/UX</h4>
+                  <ul>
+                     <li>Follow Material Design guidelines</li>
+                     <li>Use consistent spacing</li>
+                     <li>Implement responsive design</li>
+                     <li>Optimize for different screen sizes</li>
+                  </ul>
+               </div>
+               <div class="feature-card">
+                  <h4>⚡ Performance</h4>
+                  <ul>
+                     <li>Use const constructors</li>
+                     <li>Avoid unnecessary rebuilds</li>
+                     <li>Implement lazy loading</li>
+                     <li>Optimize images and assets</li>
+                  </ul>
+               </div>
+               <div class="feature-card">
+                  <h4>🔧 Code Quality</h4>
+                  <ul>
+                     <li>Follow Dart style guide</li>
+                     <li>Use meaningful variable names</li>
+                     <li>Write unit tests</li>
+                     <li>Document your code</li>
+                  </ul>
+               </div>
+               <div class="feature-card">
+                  <h4>🛡️ Security</h4>
+                  <ul>
+                     <li>Validate user inputs</li>
+                     <li>Use HTTPS for API calls</li>
+                     <li>Implement proper authentication</li>
+                     <li>Secure sensitive data</li>
+                  </ul>
+               </div>
+            </div>
+            <pre class="code-block"><code>// Good Practice Examples
+class MyWidget extends StatelessWidget {
+  const MyWidget({Key? key}) : super(key: key); // Use const constructor
+  @override
+  Widget build(BuildContext context) {
+    return const Card(
+      // Use const for static widgets
+      child: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Text('Hello Flutter!'),
+      ),
+    );
+  }
+}
+</code></pre>
+         </div>
+         <!-- Slide 15: Resources & Next Steps -->
+         <div class="slide">
+            <h2>📚 Resources & Next Steps</h2>
+            <h3>Official Resources:</h3>
+            <div class="dart-features">
+               <ul>
+                  <li>
+                     <strong>Flutter.dev:</strong> Official documentation and tutorials
+                  </li>
+                  <li><strong>DartPad:</strong> Online Dart/Flutter editor</li>
+                  <li>
+                     <strong>Flutter YouTube Channel:</strong> Video tutorials and
+                     updates
+                  </li>
+                  <li>
+                     <strong>Flutter Community:</strong> GitHub repositories and
+                     packages
+                  </li>
+               </ul>
+            </div>
+            <h3>Learning Path:</h3>
+            <ol class="step-list">
+               <li>Master Dart programming fundamentals</li>
+               <li>Build simple UI layouts with basic widgets</li>
+               <li>Learn state management patterns</li>
+               <li>Integrate APIs and handle data</li>
+               <li>Add navigation between screens</li>
+               <li>Implement local storage and databases</li>
+               <li>Learn testing and deployment</li>
+               <li>Explore advanced topics (animations, custom widgets)</li>
+            </ol>
+            <h3>Popular Flutter Packages:</h3>
+            <div class="widget-showcase">
+               <div class="widget-card">
+                  <h4>🌐 HTTP</h4>
+                  <p>API integration</p>
+               </div>
+               <div class="widget-card">
+                  <h4>🗃️ SharedPreferences</h4>
+                  <p>Local storage</p>
+               </div>
+               <div class="widget-card">
+                  <h4>🎯 Provider</h4>
+                  <p>State management</p>
+               </div>
+               <div class="widget-card">
+                  <h4>📷 Image Picker</h4>
+                  <p>Camera & gallery</p>
+               </div>
+            </div>
+            <div class="download-section">
+               <h3>📥 Download Session Materials</h3>
+               <p>
+                  Access the complete presentation slides, code examples, and
+                  additional resources.
+               </p>
+               <button class="download-btn" onclick="downloadPDF()">
+               📄 Download PDF Guide
+               </button>
+               <button class="download-btn" onclick="downloadPPT()">
+               📊 Download PPT Slides
+               </button>
+               <button class="download-btn" onclick="downloadCode()">
+               💻 Download Code Examples
+               </button>
+            </div>
+         </div>
+         <!-- Final Slide: Thank You -->
+         <div class="slide">
+            <div class="intro-slide" style="
+               background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+               color: white;
+               text-align: center;
+               padding: 60px 40px;
+               ">
+               <div class="flutter-logo">🎓</div>
+               <h1 style="-webkit-text-fill-color: white">Thank You!</h1>
+               <h2 style="color: white; border: none; margin-bottom: 40px">
+                  Questions & Discussion
+               </h2>
+               <div class="speaker-info">
+                  <h3>Contact Information</h3>
+                  <div class="contact-info-row">
+                     <p><strong>Nitesh Setti</strong></p>
+                     <p>Software Development Engineer</p>
+                     <p>EBO Mart Private Limited, Bangalore</p>
+                     <p>niteshsetti1528@gmail.com</p>
+                  </div>
+                  <div class="contact-info-exp">Experience: 3.1 Years</div>
+               </div>
+               <div style="
+                  margin-top: 30px;
+                  padding: 20px;
+                  background: rgba(255, 255, 255, 0.1);
+                  border-radius: 10px;
+                  ">
+                  <h3>🚀 Start Your Flutter Journey Today!</h3>
+                  <p>
+                     Visit flutter.dev to download the SDK and begin building amazing
+                     apps
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="navigation">
+         <button class="nav-btn" onclick="previousSlide()">← Previous</button>
+         <button class="nav-btn" onclick="nextSlide()">Next →</button>
+      </div>
+      <script src="script.js"></script>
+   </body>
+</html>

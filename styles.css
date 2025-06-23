@@ -1,0 +1,539 @@
+/* All CSS from the <style> block in index.html goes here. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6fb;
+  color: #1a1a1a;
+  overflow-x: hidden;
+  letter-spacing: 0.01em;
+}
+
+ul,
+ol {
+  margin-left: 2.2em;
+  margin-bottom: 1em;
+}
+
+li {
+  margin-left: 0.5em;
+  margin-bottom: 0.4em;
+}
+
+.presentation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px 0 20px;
+}
+
+.slide {
+  display: none;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(80, 80, 160, 0.12);
+  padding: 48px 40px 24px 40px;
+  margin: 32px 0 12px 0;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+.slide.active {
+  display: block;
+  animation: slideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 20px 60px rgba(80, 80, 160, 0.18);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #6a82fb, #fc5c7d, #f7971e, #43cea2);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  color: #22223b;
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  text-align: center;
+  background: linear-gradient(45deg, #6a82fb, #fc5c7d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  color: #3a3a5a;
+  font-size: 2.1em;
+  margin-bottom: 28px;
+  border-bottom: 3px solid #6a82fb;
+  padding-bottom: 10px;
+}
+
+h3 {
+  color: #fc5c7d;
+  font-size: 1.4em;
+  margin: 22px 0 15px 0;
+  font-weight: 600;
+}
+
+.intro-slide {
+  text-align: center;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #38b2ac 100%);
+  color: #fff;
+}
+
+.intro-slide h1 {
+  font-size: 3.2em;
+  margin-bottom: 30px;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  text-shadow: 0 4px 24px rgba(30, 60, 114, 0.18), 0 1px 2px #2a5298;
+}
+
+.speaker-info,
+.college-info {
+  background: #fff;
+  color: #22223b;
+  border: 1.5px solid #38b2ac;
+  padding: 28px;
+  border-radius: 15px;
+  margin: 28px 0;
+  box-shadow: 0 2px 16px rgba(30, 60, 114, 0.08);
+}
+
+.speaker-info h3,
+.college-info h3 {
+  color: #2a5298;
+}
+
+.college-info {
+  margin-top: 18px;
+}
+
+.flutter-logo {
+  width: 130px;
+  height: 130px;
+  background: linear-gradient(45deg, #6a82fb, #43cea2);
+  border-radius: 50%;
+  margin: 20px auto 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5em;
+  color: white;
+  box-shadow: 0 8px 24px rgba(106, 130, 251, 0.18);
+}
+
+.code-block {
+  background: #232946;
+  color: #fff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  margin: 24px 0;
+  font-family: "Fira Mono", "Courier New", monospace;
+  font-size: 1.1em;
+  overflow-x: auto;
+  border-left: 5px solid #3a7bd5;
+  box-shadow: 0 2px 8px rgba(35, 41, 70, 0.1);
+  line-height: 1.7;
+  white-space: pre;
+  max-width: 100%;
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  border: none;
+}
+
+.highlight {
+  background: linear-gradient(45deg, #fc5c7d, #f7971e);
+  color: white;
+  padding: 15px 18px;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 4px 16px rgba(252, 92, 125, 0.1);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  margin: 36px 0 36px 0;
+}
+
+.feature-card {
+  background: #eaf0fa;
+  color: #1a1a1a;
+  padding: 32px 28px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 2px 12px rgba(106, 130, 251, 0.1);
+  transition: transform 0.25s, box-shadow 0.25s;
+  padding-left: 32px;
+  min-width: 340px;
+  word-break: normal;
+  margin-bottom: 18px;
+}
+.feature-card h3 {
+  text-align: left;
+}
+.feature-card p {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 1.08em;
+  word-break: normal;
+}
+
+.navigation {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  gap: 14px;
+  z-index: 1000;
+}
+
+.nav-btn {
+  background: #3a7bd5;
+  color: #fff;
+  border: none;
+  padding: 15px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(106, 130, 251, 0.13);
+}
+
+.nav-btn:hover {
+  background: #2851a3;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(58, 123, 213, 0.18);
+}
+
+.slide-counter {
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  background: rgba(34, 34, 59, 0.85);
+  color: white;
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  z-index: 1000;
+  letter-spacing: 0.04em;
+  box-shadow: 0 2px 8px rgba(34, 34, 59, 0.1);
+}
+
+.architecture-diagram {
+  background: #fff;
+  color: #1a237e;
+  border: 2px solid #e0e7ff;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(30, 60, 114, 0.1);
+}
+.architecture-diagram .arch-layer {
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin: 12px 0;
+  padding: 18px 0 14px 0;
+  box-shadow: 0 2px 8px rgba(30, 60, 114, 0.08);
+}
+.architecture-diagram .arch-framework {
+  background: linear-gradient(90deg, #6a82fb 0%, #43cea2 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(106, 130, 251, 0.1);
+  padding: 18px 0 14px 0;
+}
+.architecture-diagram .arch-engine {
+  background: linear-gradient(90deg, #43cea2 0%, #f7971e 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(67, 206, 162, 0.1);
+  padding: 18px 0 14px 0;
+}
+.architecture-diagram .arch-platform {
+  background: linear-gradient(90deg, #fc5c7d 0%, #7c3aed 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(252, 92, 125, 0.1);
+  padding: 18px 0 14px 0;
+}
+.architecture-diagram h3 {
+  color: #2563eb;
+  margin-bottom: 18px;
+}
+
+.step-list {
+  list-style: none;
+  counter-reset: step-counter;
+}
+
+.step-list li {
+  counter-increment: step-counter;
+  margin: 15px 0;
+  padding: 15px 18px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #6a82fb;
+  position: relative;
+  font-weight: 500;
+}
+
+.step-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: -20px;
+  top: 15px;
+  background: #6a82fb;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(106, 130, 251, 0.13);
+}
+
+.speaker-info-details,
+.college-info-details {
+  margin-top: 18px;
+  font-size: 1.08em;
+  color: #444;
+  line-height: 1.6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.speaker-info-details p,
+.college-info-details p {
+  margin: 0;
+  padding: 7px 18px;
+  background: #f4f6fb;
+  border-radius: 30px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(106, 130, 251, 0.07);
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pros-cons {
+  display: flex;
+  gap: 32px;
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+.pros,
+.cons {
+  flex: 1 1 220px;
+  background: #f4f6fb;
+  border-radius: 10px;
+  padding: 18px 22px;
+  box-shadow: 0 2px 8px rgba(106, 130, 251, 0.07);
+  min-width: 200px;
+}
+.pros h4 {
+  color: #43cea2;
+}
+.cons h4 {
+  color: #fc5c7d;
+}
+
+.dart-features {
+  background: #eaf0fa;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin: 18px 0;
+  box-shadow: 0 2px 8px rgba(58, 123, 213, 0.08);
+}
+
+.widget-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  margin: 28px 0 36px 0;
+}
+.widget-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(106, 130, 251, 0.08);
+  padding: 28px 20px;
+  text-align: left;
+  font-size: 1.08em;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.download-section {
+  margin-top: 32px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px 20px;
+  box-shadow: 0 2px 8px rgba(58, 123, 213, 0.07);
+  text-align: center;
+}
+.download-btn {
+  background: #43cea2;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 28px;
+  margin: 8px 10px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(67, 206, 162, 0.13);
+}
+.download-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 600px) {
+  .speaker-info-details,
+  .college-info-details {
+    gap: 8px;
+    padding: 0 2px;
+  }
+  .speaker-info-details p,
+  .college-info-details p {
+    padding: 6px 10px;
+    font-size: 0.98em;
+    min-width: 0;
+    max-width: 100%;
+    word-break: break-word;
+    white-space: normal;
+  }
+}
+
+/* Session Agenda Slide Enhancements */
+.session-agenda-section {
+  background: linear-gradient(120deg, #e0e7ff 0%, #f4f6fb 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(106, 130, 251, 0.1);
+  padding: 36px 24px 32px 24px;
+  margin: 32px 0 36px 0;
+  position: relative;
+  overflow: hidden;
+}
+.session-agenda-section h2 {
+  font-size: 2.3em;
+  background: linear-gradient(90deg, #6a82fb, #fc5c7d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin-bottom: 32px;
+  letter-spacing: 0.03em;
+}
+.session-agenda-section .feature-grid {
+  gap: 36px;
+  margin: 0 auto;
+}
+.session-agenda-section .feature-card {
+  border: 2.5px solid transparent;
+  background: #fff;
+  background-clip: padding-box;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(106, 130, 251, 0.1);
+  transition: border 0.3s, box-shadow 0.3s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+  padding: 36px 28px 32px 28px;
+  min-width: 0;
+}
+.session-agenda-section .feature-card:hover {
+  border: 2.5px solid #6a82fb;
+  box-shadow: 0 8px 32px rgba(106, 130, 251, 0.18);
+  transform: translateY(-4px) scale(1.03);
+}
+.session-agenda-section .feature-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 18px;
+  color: #2563eb;
+  text-align: center;
+}
+.session-agenda-section .feature-card p {
+  font-size: 1.13em;
+  color: #3a3a5a;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+.session-agenda-section .feature-card::before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 18px auto;
+  background: linear-gradient(135deg, #6a82fb, #43cea2);
+  border-radius: 50%;
+  opacity: 0.12;
+}
+
+/* General card hover effect for all feature-card and widget-card */
+.feature-card:hover,
+.widget-card:hover {
+  border: 2.5px solid #6a82fb;
+  box-shadow: 0 8px 32px rgba(106, 130, 251, 0.18);
+  transform: translateY(-4px) scale(1.03);
+  transition: border 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+/* Slide 8: Widget card background color */
+.slide:nth-of-type(8) .widget-card {
+  background: #eaf0fa;
+}
